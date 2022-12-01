@@ -1,0 +1,119 @@
+$primary-color: #5588e3;
+$secondary-color: #ffff;
+$cardA-color: #4368af;
+$cardB-color: #3e63a5;
+$breakpoint-phonelg: 470px;
+$breakpoint-tablet: 768px;
+
+.world-card {
+  display: flex;
+  flex-direction: row;
+  background-color: $primary-color;
+  margin: 0 auto;
+  border-radius: 0;
+  height: 11rem;
+  color: $secondary-color;
+
+  .world-img {
+    width: 60%;
+  }
+
+  .world-body {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .world-body p {
+    font-size: 15px;
+  }
+}
+
+.samble-line {
+  color: $secondary-color;
+  padding: 4px 10px;
+  margin: 0;
+  width: 100%;
+  background-color: #35548b;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 6px;
+  padding: 6px 5px;
+  text-align: right;
+}
+
+.card-container a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+.card_Country {
+  position: relative;
+  // padding: 0.625rem;
+}
+
+.arrow-btn {
+  position: absolute;
+  right: 0.625rem;
+  top: 0.625rem;
+  border: none;
+  margin: 0;
+  background: none;
+  color: $secondary-color;
+
+  .arrow-svg {
+    border: 1px solid $secondary-color;
+    border-radius: 50%;
+    padding: 5px;
+    color: $secondary-color;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.card-pop {
+  display: block;
+}
+
+.card_CountryDetails .flag {
+  width: 100%;
+  margin-block: 0.9375rem;
+}
+
+.cardA {
+  background: $cardA-color;
+}
+
+.cardB {
+  background: $cardB-color;
+}
+
+.mb-3 {
+  margin: 20px auto;
+  width: 70%;
+}
+
+@media (min-width: $breakpoint-phonelg) {
+  .world-card {
+    width: 90%;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .world-card {
+    width: 60%;
+    height: 15rem;
+
+    .world-img {
+      width: 50%;
+    }
+  }
+}
