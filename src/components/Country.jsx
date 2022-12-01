@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import * as ReactBoots from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
@@ -6,7 +7,6 @@ import CountryList from './CountryList';
 import worldmap from '../assets/worldmap.png';
 import '../sass/Countries.scss';
 
-// eslint-disable-next-line react/prop-types
 const Countries = ({ population }) => {
   const [search, setSearch] = useState('');
 

@@ -1,68 +1,53 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
-import Card from 'react-bootstrap/Card';
-import { AiOutlineArrowRight } from 'react-icons/ai';
-import PropTypes from 'prop-types';
-import { fetchCountries } from '../redux/countries/countries';
-import colorSequency from '../script';
-import '../sass/Countries.scss';
+import { ListGroup } from 'react-bootstrap';
+import { useSelector, useDispatch } from 'react-redux';
+import { useLocation } from 'react-router-dom';
+import { fetchDetails } from '../redux/countries/details';
+import '../sass/Details.scss';
 
-const CountryList = ({ search }) => {
-  const { countriesList } = useSelector((state) => state.countrySlice);
-
-  // console.log(countriesList);
+const CountryDetails = () => {
+  const { countryDetails } = useSelector((state) => state.detailslice);
   const dispatch = useDispatch();
+  const { state } = useLocation();
 
   useEffect(() => {
-    if (!countriesList.length) {
-      dispatch(fetchCountries());
-    }
-  }, [countriesList, dispatch]);
+    dispatch(fetchDetails(state));
+  }, []);
 
-  const filteredCountries = countriesList
-    .filter((country) => country.name.common.toLowerCase().includes(search));
-  const sequence = colorSequency(countriesList.length);
   return (
-    <div className="card-container">
-      {filteredCountries.map((country, index) => (
-        <NavLink
-          to={`/details/${country.name.common}`}
-          state={country.name.common}
-          key={Math.random()}
-          className={`${sequence.includes(index + 1) ? 'cardA' : 'cardB'}`}
-        >
-          <div
-            className="card_Country "
-            key={Math.random()}
-          >
-            <Card.Img variant="top" src={country.flags.png} alt="Flag" />
-
-            <button
-              type="button"
-              className="arrow-btn"
-            >
-              <AiOutlineArrowRight className="arrow-svg" />
-            </button>
-
+    <div className="countryDetails">
+      {countryDetails.map((country) => (
+        <div className="cardDetails" key={country.id}>
+          <div className="detailsTop">
             <h2>{country.name.common}</h2>
-            <div className="card_Population">
-              <h3>
-                Population
-                <span className="card-pop">{country.population}</span>
-              </h3>
-            </div>
+            <img className="detailFlag" src={country.flags.svg} alt="Flag" />
           </div>
-        </NavLink>
+          <ListGroup className="items">
+            <ListGroup.Item className="detailItem">
+              Capital City:
+              {country.capital}
+            </ListGroup.Item>
+            <ListGroup.Item className="detailItem">
+              Area:
+              {` ${country.area}km`}
+            </ListGroup.Item>
+            <ListGroup.Item className="detailItem">
+              Population:
+              {` ${country.population}`}
+            </ListGroup.Item>
+            <ListGroup.Item className="detailItem">
+              independent:
+              {` ${country.independent}`}
+            </ListGroup.Item>
+            <ListGroup.Item className="detailItem">
+              Landlocked:
+              {` ${country.landlocked}`}
+            </ListGroup.Item>
+          </ListGroup>
+        </div>
       ))}
     </div>
   );
 };
-CountryList.propTypes = {
-  search: PropTypes.string,
-};
-CountryList.defaultProps = {
-  search: null,
-};
 
-export default CountryList;
+export default CountryDetails;
