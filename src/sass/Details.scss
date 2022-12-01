@@ -1,0 +1,26 @@
+$primary-color: #ffff;
+$lineA: #4368AF;
+$lineB-color: #3E63A5;
+
+.countryDetails {
+    width: 100%;
+    .cardDetails {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 20px;
+        .detailsTop {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            color: $primary-color;
+        }
+        .detailItem {
+            color: $primary-color;
+            background-color: $lineA;
+        }
+        .detailItem:nth-child(odd) {
+            background-color: $lineB-color;
+        }
+    }
+}
