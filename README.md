@@ -146,6 +146,8 @@ Feel free to check the [issues page](../../issues/).
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 > I would like to thank Microverse for providing the opportunity and  my coding partner for assisting me throughout the project.
+> Nelson Sakwa for the amazing on Behance
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
