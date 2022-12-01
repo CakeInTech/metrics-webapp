@@ -119,9 +119,9 @@ npm test
 
 > The features I will be looking forward to add to the project are mainly:
 
-- [ ] **[Enhance the My Profile section by adding a placeholder message when the "My Missions" or "My Rockets" lists are empty (no missions joined or no rockets reserved).]**
-- [ ] **[Enhance the My Profile section by adding the "Cancel reservation" and "Leave Mission" buttons to the lists here. Clicking them will dispatch actions already used in the main Rockets and Missions sections.]**
-- [ ] **[Enhance the My Profile section by adding the "Read more" button for each mission and rocket. Upon click, it will open a corresponding Wikipedia page in a new tab.]**
+- [ ] **[Include a continets page where countries are sorted by continents]**
+- [ ] **[Display more details about the country and live population stats]**
+- [ ] **[Improve the overall desing of the project]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
