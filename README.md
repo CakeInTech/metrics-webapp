@@ -12,7 +12,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Space-X Rockets ](#-space-x-rockets-)
+- [📖 Metricks webapp ](#-metricks-webapp-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -75,7 +75,7 @@
 
 > Link to deployed project is:
 
-- [Live Demo Link]()
+- [Live Demo Link](https://country-stats-m.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,7 +88,7 @@ To get a local copy up and running, follow these steps.
 
 ### Setup
 ```
-git clone Link of the project
+git clone git@github.com:MohamedCK/metrics-webapp.git
 ```
 ### Install
 ```
@@ -146,7 +146,8 @@ Feel free to check the [issues page](../../issues/).
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 > I would like to thank Microverse for providing the opportunity and  my coding partner for assisting me throughout the project.
-> Nelson Sakwa for the amazing on Behance
+
+> I would like to thank [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)  for the amazing design idea on Behance
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -10,8 +10,6 @@ import '../sass/Countries.scss';
 
 const CountryList = ({ search }) => {
   const { countriesList } = useSelector((state) => state.countrySlice);
-
-  // console.log(countriesList);
   const dispatch = useDispatch();
 
   useEffect(() => {
