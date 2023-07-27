@@ -30,7 +30,7 @@
 
 # 📖 Metricks webapp <a name="about-project"></a>
 
-> This webapp fetches the data from an api, and provided the country stats to the users. :)
+> This web app fetches the data from an API and provides the country stats to the users. :)
 
 **[Metricks webapp]** is:
 
